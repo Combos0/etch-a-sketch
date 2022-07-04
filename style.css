@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    background-color: blue;
+    height: 5vh;
+    top: 0px;
+    width: 100%;
+}
+
+#center-three {
+    display: flex;
+    flex-direction: row;
+}
+
+.sides {
+    background-color: red;
+    min-width: 5vw;
+    height: 90vh;
+}
+
+#left {
+    
+}
+
+#right {
+    
+}
+
+#container {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.squares {
+    padding: 2px;
+    border: 1px solid black;
+    gap: 1px;
+    flex: 1 0 6%;
+    height: ;
+}
+
+#bottom {
+    background-color: green;
+    height: 5vh;
+}
