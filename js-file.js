@@ -2,12 +2,8 @@ const centerDiv = document.querySelector('#container');
 
 let startButton = document.querySelector('#reset-switch');
 startButton.addEventListener('click', () => {
+    checksForGrid();
     asksForSize();
-});
-
-let removebutton = document.querySelector('#remover');
-removebutton.addEventListener('click', () => {
-    emptiesArray();
 });
 
 function generatesDiv() {
@@ -29,9 +25,15 @@ function removesDiv() {
     centerDiv.removeChild(oldBlock);
 };
 
-function emptiesArray() {
-    for (i = 0; i < 256; i++) {
-        removesDiv();
+//checks to see if there are any cells inside the drawing space
+//removes them before another grid is drawn
+function checksForGrid() {
+    let gridContent = document.querySelectorAll('.squares');
+    let gridCount = Array.from(gridContent).length;
+    if (gridCount > 0) {
+        for (i = 0; i < gridCount; i++) {
+            removesDiv();
+        };
     };
 };
 
